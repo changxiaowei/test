@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="jq.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var obj = {
+				a:1,
+				b:{f:{g:1}},
+				c:[1,2,3]
+			}
+			var obj2 = $.extend(true, {}, obj);
+			console.log(obj2.b===obj.b)
+		</script>
+	</body>
+</html>

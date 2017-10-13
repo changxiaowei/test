@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组去重</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//		方法1：
+//			function unique(arr) {
+//				var res = [];
+//				for(var i=0,len=arr.length;i<len;i++){
+//					
+//				    var item = arr[i];
+//				    
+//				    for(var j =0,jlen=res.length;j<=jlen;j++){
+//                        				    	
+//				    	if(item === res[j]) {
+//				    		
+//				    		break;
+//				    	}
+//				    		console.log(j)
+//				    	if(j === jlen){
+//                          
+//				    		res.push(item)
+//				    	}
+//				    }
+//				}
+//				return res
+//			}
+
+
+//         方法2：短路表达式的运用
+//         function unique(a){
+//         	var res = [];
+//         	for(var i = 0,len=a.length;i<len;i++){
+//         		var item = a[i];
+//         		(res.indexOf(item)===-1)&&res.push(item)
+//         	}
+//         	return res;
+//         }
+//         方法三：
+           function unique(a){
+           	var res = []
+           	for(var i =0,len=a.length;i<len;i++){
+           		for(var j = i+1;j<len;j++){
+           			if(a[i] === a[j])
+           				{j=++i;}
+           			
+           			
+           		}
+           		res.push(a[i])
+           		
+           	}
+           	
+           	return res
+           }
+			var arr = [1,1,"1","2"];
+			var ans = unique(arr);
+			console.log(ans)
+//			for(var i =0;i<4;i++){
+//				if(i===2){
+//					i++;
+//				}
+//				console.log(i)
+//			}
+
+
+//函数是将所有方法提取出来最后谁调用使用谁
+// alert(a);
+// a();
+// var a = 3;
+// function a(){alert(10)};
+// alert(a)
+// a=6;
+// a();
+		</script>
+	</body>
+</html>

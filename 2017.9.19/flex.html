@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				display: flex;
+				display: -webkit-flex;
+				width: 1000px;
+				height: 700px;
+				border: 1px solid #FF0000;
+				flex-direction:row;
+				text-align: center;
+				justify-content: flex-end;
+				align-items: center;
+			}
+			.box-item{
+				display: flex;
+				flex: 1;
+				width: 200px;
+				height: 200px;
+				border: 1px solid #F0AD4E;
+				text-align: center;
+				line-height: 200px;
+				flex-grow: 1;
+				
+			}
+			.center{
+				flex-grow: 2;
+			}
+			.box-item span{
+				display: block;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box-item "><span>1</span></div>
+			<div class="box-item center"><span>2</span></div>
+			<div class="box-item"><span>3</span></div>
+		</div>
+	</body>
+</html>
